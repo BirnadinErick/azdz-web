@@ -5,10 +5,10 @@ export default {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      primary: 'rgb(var(--ac-primary), <alpha-value>)',
-      secondary: 'rgb(var(--ac-secondary), <alpha-value>)',
+      primary: '#bf2eef',
+      secondary: '#2097ec',
       white: 'rgb(var(--ac-white), <alpha-value>)',
-      black: 'rgb(0, 0, 0)',
+      black: '#1a1423',
       dark: 'rgb(var(--ac-dark), <alpha-value>)',
       gray: {
         100: 'rgb(var(--ac-gray-100), <alpha-value>)',
