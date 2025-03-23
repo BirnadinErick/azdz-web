@@ -8,6 +8,7 @@ import Hero from '../sections/Hero.astro'
 import Intro from '../sections/Intro.astro'
 import Layout from '../layouts/Layout.astro'
 import Sidebar from '../layouts/Sidebar.astro'
+import CTAButton from '../components/CTAButton.astro'
 ---
 
 <Layout title="AZDZ Club - Deggendorf">
@@ -20,7 +21,7 @@ import Sidebar from '../layouts/Sidebar.astro'
       description="we provide students with hands-on experience and opportunities to work on projects related to electrical engineering"
     >
       <div>
-        <Button href="https://docs.google.com/forms/d/e/1FAIpQLSd8mY3Qk8JAmq4pG9U7Co-f_q7-g6feM_3rwFmAWOiIU062Nw/viewform?usp=sharing" label="Join our adventure!" />
+        <CTAButton />
       </div>
     </Hero>
     <Intro />
@@ -29,7 +30,7 @@ import Sidebar from '../layouts/Sidebar.astro'
       title="Ready to <strong>Get on board?</strong>"
       description="Whether you are a beginner or an expert, you will find hands-on learning, exciting projects, and a supportive community. Do not just study—build, experiment, and innovate with us! 🤖"
     >
-      <Button href="https://docs.google.com/forms/d/e/1FAIpQLSd8mY3Qk8JAmq4pG9U7Co-f_q7-g6feM_3rwFmAWOiIU062Nw/viewform?usp=sharing" label="Join our adventure!" />
+      <CTAButton />
     </CTA>
   </main>
   <Footer />

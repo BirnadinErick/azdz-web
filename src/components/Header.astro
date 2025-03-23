@@ -1,10 +1,14 @@
 ---
-import { Icon, ThemeSwitch } from 'free-astro-components'
+import { Button, ThemeSwitch } from 'free-astro-components'
 import Hamburguer from './Hamburguer.astro'
+
+import Logo from './Logo.astro'
+import CTAButton from './CTAButton.astro'
+import { SignUpURL } from '../data/global'
 ---
 
 <header
-  class="fixed inset-x-0 top-0 bg-neutral-100/60 text-neutral-700 py-4 border-b border-neutral-300/50 backdrop-blur-md z-20"
+  class="fixed inset-x-0 top-0 bg-neutral-100/60 text-neutral-700 pt-4 pb-2 border-b border-neutral-300/50 backdrop-blur-md z-20"
 >
   <div class="container flex justify-between items-center gap-8">
     <a
@@ -12,31 +16,46 @@ import Hamburguer from './Hamburguer.astro'
       href="/"
       aria-label="AZDZ-Club"
     >
-    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M14 2a1 1 0 0 0-1.864-.504l-7 12A1 1 0 0 0 6 15h4v7a1 1 0 0 0 1.864.504l7-12A1 1 0 0 0 18 9h-4z" clip-rule="evenodd"/></svg>
+      <Logo />
     </a>
 
     <nav>
       <ul class="flex items-center gap-8">
-        <!-- <li>
+        <li class="hidden lg:block">
           <a
             class="text-sm hover:text-primary transition duration-300 ease-in-out"
-            href="/guide/installation">Projects</a
+            href="/guides">Guides</a
           >
         </li>
         <li class="hidden lg:block">
           <a
             class="text-sm hover:text-primary transition duration-300 ease-in-out"
-            href="/components/button">Blogs</a
+            href="/projects">Projects</a
           >
         </li>
-        <li class="lg:hidden">
-          <Hamburguer />
-        </li> -->
+        <li class="hidden lg:block">
+          <a
+            class="text-sm hover:text-primary transition duration-300 ease-in-out"
+            href="/Workshops">Workshops</a
+          >
+        </li>
         <li>
           <ThemeSwitch />
         </li>
+        <li class="lg:hidden">
+          <Hamburguer />
+        </li>
+        <li class="hidden lg:block">
+          <Button href="" label="Join our adventure!" />
+        </li>
       </ul>
     </nav>
+  </div>
+  <div class="lg:hidden border-t mt-2 pt-2 h-full flex justify-center items-center border-neutral-300/50">
+    <p>
+      Why don't you join us?
+      <a class="text-sm text-primary underline underline-offset-4" href={SignUpURL}>Sign Up for free here.</a>
+    </p>
   </div>
 </header>
 
